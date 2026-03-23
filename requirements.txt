@@ -1,0 +1,12 @@
+pyspark
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+scikit-learn
+streamlit
+snowflake-connector-python
+pyspark==3.5.1
+azure-storage-blob
+python-dotenv

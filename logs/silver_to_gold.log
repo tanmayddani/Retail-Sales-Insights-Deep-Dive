@@ -1,0 +1,42 @@
+2026-03-20 21:28:55,759 | INFO | SILVER to GOLD pipeline started
+2026-03-20 21:29:29,097 | INFO | sales_mart written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/sales_mart
+2026-03-20 21:29:37,502 | INFO | dashboard_cube written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dashboard_cube
+2026-03-20 21:29:39,856 | INFO | sales_summary written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/sales_summary
+2026-03-20 21:29:43,705 | INFO | revenue_by_state written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/revenue_by_state
+2026-03-20 21:29:50,302 | INFO | top_customers written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/top_customers
+2026-03-20 21:29:53,144 | INFO | product_performance written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/product_performance
+2026-03-20 21:29:57,361 | INFO | monthly_sales written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/monthly_sales
+2026-03-20 21:30:03,390 | INFO | category_performance written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/category_performance
+2026-03-20 21:30:05,389 | INFO | payment_mix written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/payment_mix
+2026-03-20 21:30:09,858 | INFO | delivery_performance written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/delivery_performance
+2026-03-20 21:30:15,984 | INFO | customer_segments written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/customer_segments
+2026-03-20 21:30:16,252 | INFO | SILVER to GOLD pipeline completed
+2026-03-20 22:31:39,844 | INFO | SILVER to GOLD pipeline started: Building Star Schema
+2026-03-20 22:32:03,192 | INFO | dim_date written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_date
+2026-03-20 22:32:03,388 | ERROR | Pipeline failed: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `customer_unique_id` cannot be resolved. Did you mean one of the following? [`customer_id`, `order_item_id`, `seller_id`, `order_id`, `order_status`].;
+'Aggregate ['customer_unique_id], ['customer_unique_id, count(distinct order_id#16) AS lifetime_orders#130L, sum(price#21) AS lifetime_value#132]
++- Project [order_id#16, order_item_id#17, product_id#18, seller_id#19, shipping_limit_date#20, price#21, freight_value#22, customer_id#1, order_status#2, order_purchase_timestamp#3, order_approved_at#4, order_delivered_carrier_date#5, order_delivered_customer_date#6, order_estimated_delivery_date#7]
+   +- Join Inner, (order_id#16 = order_id#0)
+      :- Relation [order_id#16,order_item_id#17,product_id#18,seller_id#19,shipping_limit_date#20,price#21,freight_value#22] parquet
+      +- Relation [order_id#0,customer_id#1,order_status#2,order_purchase_timestamp#3,order_approved_at#4,order_delivered_carrier_date#5,order_delivered_customer_date#6,order_estimated_delivery_date#7] parquet
+
+2026-03-20 22:34:46,848 | INFO | SILVER to GOLD pipeline started: Building Star Schema
+2026-03-20 22:35:10,794 | INFO | dim_date written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_date
+2026-03-20 22:35:11,003 | ERROR | Pipeline failed: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `order_items`.`order_id` cannot be resolved. Did you mean one of the following? [`order_item_id`, `order_approved_at`, `order_id`, `customer_id`, `order_status`].;
+'Aggregate [customer_unique_id#31], [customer_unique_id#31, 'count(distinct 'order_items.order_id) AS lifetime_orders#153, sum(price#21) AS lifetime_value#155]
++- Project [customer_id#1, order_id#16, order_item_id#17, product_id#18, seller_id#19, shipping_limit_date#20, price#21, freight_value#22, order_status#2, order_purchase_timestamp#3, order_approved_at#4, order_delivered_carrier_date#5, order_delivered_customer_date#6, order_estimated_delivery_date#7, customer_unique_id#31, customer_zip_code_prefix#32, customer_city#33, customer_state#34]
+   +- Join Inner, (customer_id#1 = customer_id#30)
+      :- Project [order_id#16, order_item_id#17, product_id#18, seller_id#19, shipping_limit_date#20, price#21, freight_value#22, customer_id#1, order_status#2, order_purchase_timestamp#3, order_approved_at#4, order_delivered_carrier_date#5, order_delivered_customer_date#6, order_estimated_delivery_date#7]
+      :  +- Join Inner, (order_id#16 = order_id#0)
+      :     :- Relation [order_id#16,order_item_id#17,product_id#18,seller_id#19,shipping_limit_date#20,price#21,freight_value#22] parquet
+      :     +- Relation [order_id#0,customer_id#1,order_status#2,order_purchase_timestamp#3,order_approved_at#4,order_delivered_carrier_date#5,order_delivered_customer_date#6,order_estimated_delivery_date#7] parquet
+      +- Relation [customer_id#30,customer_unique_id#31,customer_zip_code_prefix#32,customer_city#33,customer_state#34] parquet
+
+2026-03-20 22:36:48,239 | INFO | SILVER to GOLD pipeline started: Building Star Schema
+2026-03-20 22:37:11,923 | INFO | dim_date written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_date
+2026-03-20 22:37:20,737 | INFO | dim_customers written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_customers
+2026-03-20 22:37:22,951 | INFO | dim_products written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_products
+2026-03-20 22:37:24,153 | INFO | dim_sellers written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/dim_sellers
+2026-03-20 22:37:28,329 | INFO | fact_sales written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/fact_sales
+2026-03-20 22:37:34,689 | INFO | fact_orders written to gold at abfss://srikanta@geocartdatalake.dfs.core.windows.net/gold/fact_orders
+2026-03-20 22:37:35,015 | INFO | SILVER to GOLD Star Schema pipeline completed

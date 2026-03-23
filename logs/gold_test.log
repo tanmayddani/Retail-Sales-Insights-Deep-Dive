@@ -1,0 +1,93 @@
+2026-03-20 22:21:15,770 | INFO | Starting manual Gold validation test for all analytical tables...
+2026-03-20 22:21:29,902 | INFO | --- AZURE GOLD LAYER CHECK: SALES_MART ---
+2026-03-20 22:21:34,433 | INFO | PASS: sales_mart is readable. Rows: 112650, Columns: 27
+2026-03-20 22:21:37,551 | WARNING | NULLS (EXPECTED FROM JOINS?): 'product_category_name' has 1603 nulls (1.42%).
+2026-03-20 22:21:37,551 | WARNING | NULLS (EXPECTED FROM JOINS?): 'order_approved_at' has 15 nulls (0.01%).
+2026-03-20 22:21:37,551 | WARNING | NULLS (EXPECTED FROM JOINS?): 'order_delivered_carrier_date' has 1194 nulls (1.06%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'order_delivered_customer_date' has 2454 nulls (2.18%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'product_category_name_english' has 1627 nulls (1.44%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'payment_value' has 3 nulls (0.0%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'payment_installments_count' has 3 nulls (0.0%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'review_score' has 1491 nulls (1.32%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'category_english' has 1603 nulls (1.42%).
+2026-03-20 22:21:37,556 | WARNING | NULLS (EXPECTED FROM JOINS?): 'delivery_days' has 2454 nulls (2.18%).
+2026-03-20 22:21:39,327 | INFO | METRIC 'price': Min = 0.85, Max = 6735.0
+2026-03-20 22:21:39,327 | INFO | PASS (BUSINESS LOGIC): 'price' has valid positive ranges.
+2026-03-20 22:21:40,527 | INFO | METRIC 'freight_value': Min = 0.0, Max = 409.68
+2026-03-20 22:21:40,527 | INFO | PASS (BUSINESS LOGIC): 'freight_value' has valid positive ranges.
+2026-03-20 22:21:41,165 | INFO | METRIC 'payment_value': Min = 9.59, Max = 13664.08
+2026-03-20 22:21:41,165 | INFO | PASS (BUSINESS LOGIC): 'payment_value' has valid positive ranges.
+2026-03-20 22:21:41,651 | INFO | METRIC 'delivery_days': Min = 0, Max = 210
+2026-03-20 22:21:41,651 | INFO | PASS (BUSINESS LOGIC): 'delivery_days' has valid positive ranges.
+2026-03-20 22:21:41,651 | INFO | --------------------------------------------------
+2026-03-20 22:21:41,651 | INFO | --- AZURE GOLD LAYER CHECK: DASHBOARD_CUBE ---
+2026-03-20 22:21:42,447 | INFO | PASS: dashboard_cube is readable. Rows: 13419, Columns: 10
+2026-03-20 22:21:42,923 | WARNING | NULLS (EXPECTED FROM JOINS?): 'category_english' has 316 nulls (2.35%).
+2026-03-20 22:21:42,923 | WARNING | NULLS (EXPECTED FROM JOINS?): 'avg_review_score' has 123 nulls (0.92%).
+2026-03-20 22:21:42,923 | WARNING | NULLS (EXPECTED FROM JOINS?): 'avg_delivery_days' has 1740 nulls (12.97%).
+2026-03-20 22:21:42,923 | WARNING | NULLS (EXPECTED FROM JOINS?): 'payment_value' has 1 nulls (0.01%).
+2026-03-20 22:21:43,239 | INFO | METRIC 'revenue': Min = 3.5, Max = 49676.6
+2026-03-20 22:21:43,239 | INFO | PASS (BUSINESS LOGIC): 'revenue' has valid positive ranges.
+2026-03-20 22:21:43,664 | INFO | METRIC 'payment_value': Min = 11.56, Max = 109359.73
+2026-03-20 22:21:43,664 | INFO | PASS (BUSINESS LOGIC): 'payment_value' has valid positive ranges.
+2026-03-20 22:21:43,988 | INFO | METRIC 'avg_delivery_days': Min = 1.0, Max = 210.0
+2026-03-20 22:21:43,988 | INFO | PASS (BUSINESS LOGIC): 'avg_delivery_days' has valid positive ranges.
+2026-03-20 22:21:43,988 | INFO | --------------------------------------------------
+2026-03-20 22:21:43,988 | INFO | --- AZURE GOLD LAYER CHECK: SALES_SUMMARY ---
+2026-03-20 22:21:44,453 | INFO | PASS: sales_summary is readable. Rows: 1, Columns: 3
+2026-03-20 22:21:44,776 | INFO | PASS: No null values found in sales_summary.
+2026-03-20 22:21:45,197 | INFO | METRIC 'total_revenue': Min = 13591643.699999884, Max = 13591643.699999884
+2026-03-20 22:21:45,197 | INFO | PASS (BUSINESS LOGIC): 'total_revenue' has valid positive ranges.
+2026-03-20 22:21:45,434 | INFO | METRIC 'avg_order_value': Min = 120.6537390146461, Max = 120.6537390146461
+2026-03-20 22:21:45,434 | INFO | PASS (BUSINESS LOGIC): 'avg_order_value' has valid positive ranges.
+2026-03-20 22:21:45,434 | INFO | --------------------------------------------------
+2026-03-20 22:21:45,434 | INFO | --- AZURE GOLD LAYER CHECK: REVENUE_BY_STATE ---
+2026-03-20 22:21:46,049 | INFO | PASS: revenue_by_state is readable. Rows: 27, Columns: 3
+2026-03-20 22:21:46,372 | INFO | PASS: No null values found in revenue_by_state.
+2026-03-20 22:21:46,733 | INFO | METRIC 'total_revenue': Min = 7829.43, Max = 5202955.049999878
+2026-03-20 22:21:46,733 | INFO | PASS (BUSINESS LOGIC): 'total_revenue' has valid positive ranges.
+2026-03-20 22:21:46,733 | INFO | --------------------------------------------------
+2026-03-20 22:21:46,733 | INFO | --- AZURE GOLD LAYER CHECK: TOP_CUSTOMERS ---
+2026-03-20 22:21:47,499 | INFO | PASS: top_customers is readable. Rows: 98666, Columns: 3
+2026-03-20 22:21:48,149 | INFO | PASS: No null values found in top_customers.
+2026-03-20 22:21:48,447 | INFO | METRIC 'lifetime_value': Min = 0.85, Max = 13440.0
+2026-03-20 22:21:48,447 | INFO | PASS (BUSINESS LOGIC): 'lifetime_value' has valid positive ranges.
+2026-03-20 22:21:48,447 | INFO | --------------------------------------------------
+2026-03-20 22:21:48,447 | INFO | --- AZURE GOLD LAYER CHECK: PRODUCT_PERFORMANCE ---
+2026-03-20 22:21:49,040 | INFO | PASS: product_performance is readable. Rows: 32951, Columns: 3
+2026-03-20 22:21:49,496 | INFO | PASS: No null values found in product_performance.
+2026-03-20 22:21:49,800 | INFO | METRIC 'total_revenue': Min = 2.2, Max = 63885.0
+2026-03-20 22:21:49,800 | INFO | PASS (BUSINESS LOGIC): 'total_revenue' has valid positive ranges.
+2026-03-20 22:21:49,800 | INFO | --------------------------------------------------
+2026-03-20 22:21:49,800 | INFO | --- AZURE GOLD LAYER CHECK: MONTHLY_SALES ---
+2026-03-20 22:21:50,382 | INFO | PASS: monthly_sales is readable. Rows: 24, Columns: 3
+2026-03-20 22:21:50,731 | INFO | PASS: No null values found in monthly_sales.
+2026-03-20 22:21:51,060 | INFO | METRIC 'monthly_revenue': Min = 10.9, Max = 1010271.3699999888
+2026-03-20 22:21:51,063 | INFO | PASS (BUSINESS LOGIC): 'monthly_revenue' has valid positive ranges.
+2026-03-20 22:21:51,063 | INFO | --------------------------------------------------
+2026-03-20 22:21:51,063 | INFO | --- AZURE GOLD LAYER CHECK: CATEGORY_PERFORMANCE ---
+2026-03-20 22:21:51,639 | INFO | PASS: category_performance is readable. Rows: 74, Columns: 4
+2026-03-20 22:21:52,075 | WARNING | NULLS (EXPECTED FROM JOINS?): 'category_english' has 1 nulls (1.35%).
+2026-03-20 22:21:52,524 | INFO | METRIC 'total_revenue': Min = 283.28999999999996, Max = 1258681.339999986
+2026-03-20 22:21:52,524 | INFO | PASS (BUSINESS LOGIC): 'total_revenue' has valid positive ranges.
+2026-03-20 22:21:52,524 | INFO | --------------------------------------------------
+2026-03-20 22:21:52,524 | INFO | --- AZURE GOLD LAYER CHECK: PAYMENT_MIX ---
+2026-03-20 22:21:53,266 | INFO | PASS: payment_mix is readable. Rows: 5, Columns: 3
+2026-03-20 22:21:53,965 | INFO | PASS: No null values found in payment_mix.
+2026-03-20 22:21:54,398 | INFO | METRIC 'total_payment_value': Min = 0.0, Max = 12542084.189999908
+2026-03-20 22:21:54,398 | INFO | PASS (BUSINESS LOGIC): 'total_payment_value' has valid positive ranges.
+2026-03-20 22:21:54,398 | INFO | --------------------------------------------------
+2026-03-20 22:21:54,398 | INFO | --- AZURE GOLD LAYER CHECK: DELIVERY_PERFORMANCE ---
+2026-03-20 22:21:55,198 | INFO | PASS: delivery_performance is readable. Rows: 27, Columns: 3
+2026-03-20 22:21:55,593 | INFO | PASS: No null values found in delivery_performance.
+2026-03-20 22:21:55,810 | INFO | METRIC 'avg_delivery_days': Min = 8.66, Max = 28.22
+2026-03-20 22:21:55,810 | INFO | PASS (BUSINESS LOGIC): 'avg_delivery_days' has valid positive ranges.
+2026-03-20 22:21:55,810 | INFO | --------------------------------------------------
+2026-03-20 22:21:55,810 | INFO | --- AZURE GOLD LAYER CHECK: CUSTOMER_SEGMENTS ---
+2026-03-20 22:21:56,333 | INFO | PASS: customer_segments is readable. Rows: 95420, Columns: 5
+2026-03-20 22:21:56,905 | WARNING | NULLS (EXPECTED FROM JOINS?): 'avg_review_score' has 722 nulls (0.76%).
+2026-03-20 22:21:57,156 | INFO | METRIC 'lifetime_value': Min = 0.85, Max = 13440.0
+2026-03-20 22:21:57,156 | INFO | PASS (BUSINESS LOGIC): 'lifetime_value' has valid positive ranges.
+2026-03-20 22:21:57,156 | INFO | --------------------------------------------------
+2026-03-20 22:21:57,156 | INFO | Test execution finished. Shutting down Spark...
+2026-03-20 22:21:59,518 | INFO | Spark shut down successfully.

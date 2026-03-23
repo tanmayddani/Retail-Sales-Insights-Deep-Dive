@@ -1,0 +1,11 @@
+2026-03-20 20:49:31,693 | INFO | BRONZE to SILVER pipeline started
+2026-03-20 20:50:22,083 | INFO | customers written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/customers
+2026-03-20 20:50:33,552 | INFO | orders written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/orders
+2026-03-20 20:50:42,478 | INFO | order_items written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/order_items
+2026-03-20 20:50:46,085 | INFO | payments written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/payments
+2026-03-20 20:50:48,286 | INFO | products written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/products
+2026-03-20 20:50:49,480 | INFO | category_translation written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/category_translation
+2026-03-20 20:50:51,229 | INFO | sellers written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/sellers
+2026-03-20 20:51:01,877 | INFO | reviews written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/reviews
+2026-03-20 20:51:32,811 | INFO | geolocation written to silver at abfss://srikanta@geocartdatalake.dfs.core.windows.net/silver/geolocation
+2026-03-20 20:51:33,144 | INFO | BRONZE to SILVER pipeline completed

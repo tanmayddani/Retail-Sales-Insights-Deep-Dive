@@ -1,0 +1,54 @@
+2026-03-20 22:11:37,329 | INFO | Starting manual Bronze validation test for all files...
+2026-03-20 22:11:51,848 | INFO | --- AZURE BRONZE LAYER CHECK: olist_customers_dataset.csv ---
+2026-03-20 22:11:59,900 | INFO | PASS: olist_customers_dataset.csv is readable. Rows: 99441, Columns: 5
+2026-03-20 22:12:01,664 | INFO | PASS: No null values found in olist_customers_dataset.csv.
+2026-03-20 22:12:01,664 | INFO | --------------------------------------------------
+2026-03-20 22:12:01,664 | INFO | --- AZURE BRONZE LAYER CHECK: olist_orders_dataset.csv ---
+2026-03-20 22:12:10,647 | INFO | PASS: olist_orders_dataset.csv is readable. Rows: 99441, Columns: 8
+2026-03-20 22:12:14,430 | WARNING | NULLS: 'order_approved_at' contains 160 nulls (0.16%).
+2026-03-20 22:12:14,430 | WARNING | NULLS: 'order_delivered_carrier_date' contains 1783 nulls (1.79%).
+2026-03-20 22:12:14,444 | WARNING | NULLS: 'order_delivered_customer_date' contains 2965 nulls (2.98%).
+2026-03-20 22:12:14,444 | INFO | --------------------------------------------------
+2026-03-20 22:12:14,444 | INFO | --- AZURE BRONZE LAYER CHECK: olist_order_items_dataset.csv ---
+2026-03-20 22:12:21,547 | INFO | PASS: olist_order_items_dataset.csv is readable. Rows: 112650, Columns: 7
+2026-03-20 22:12:24,289 | INFO | PASS: No null values found in olist_order_items_dataset.csv.
+2026-03-20 22:12:24,289 | INFO | --------------------------------------------------
+2026-03-20 22:12:24,289 | INFO | --- AZURE BRONZE LAYER CHECK: olist_order_payments_dataset.csv ---
+2026-03-20 22:12:27,013 | INFO | PASS: olist_order_payments_dataset.csv is readable. Rows: 103886, Columns: 5
+2026-03-20 22:12:27,949 | INFO | PASS: No null values found in olist_order_payments_dataset.csv.
+2026-03-20 22:12:27,950 | INFO | --------------------------------------------------
+2026-03-20 22:12:27,950 | INFO | --- AZURE BRONZE LAYER CHECK: olist_order_reviews_dataset.csv ---
+2026-03-20 22:12:35,859 | INFO | PASS: olist_order_reviews_dataset.csv is readable. Rows: 104082, Columns: 7
+2026-03-20 22:12:38,801 | WARNING | NULLS: 'review_id' contains 1 nulls (0.0%).
+2026-03-20 22:12:38,801 | WARNING | NULLS: 'order_id' contains 2236 nulls (2.15%).
+2026-03-20 22:12:38,801 | WARNING | NULLS: 'review_score' contains 2380 nulls (2.29%).
+2026-03-20 22:12:38,801 | WARNING | NULLS: 'review_comment_title' contains 92157 nulls (88.54%).
+2026-03-20 22:12:38,801 | WARNING | NULLS: 'review_comment_message' contains 63079 nulls (60.61%).
+2026-03-20 22:12:38,807 | WARNING | NULLS: 'review_creation_date' contains 8764 nulls (8.42%).
+2026-03-20 22:12:38,807 | WARNING | NULLS: 'review_answer_timestamp' contains 8785 nulls (8.44%).
+2026-03-20 22:12:38,807 | INFO | --------------------------------------------------
+2026-03-20 22:12:38,807 | INFO | --- AZURE BRONZE LAYER CHECK: olist_products_dataset.csv ---
+2026-03-20 22:12:40,331 | INFO | PASS: olist_products_dataset.csv is readable. Rows: 32951, Columns: 9
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_category_name' contains 610 nulls (1.85%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_name_lenght' contains 610 nulls (1.85%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_description_lenght' contains 610 nulls (1.85%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_photos_qty' contains 610 nulls (1.85%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_weight_g' contains 2 nulls (0.01%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_length_cm' contains 2 nulls (0.01%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_height_cm' contains 2 nulls (0.01%).
+2026-03-20 22:12:40,862 | WARNING | NULLS: 'product_width_cm' contains 2 nulls (0.01%).
+2026-03-20 22:12:40,862 | INFO | --------------------------------------------------
+2026-03-20 22:12:40,862 | INFO | --- AZURE BRONZE LAYER CHECK: olist_sellers_dataset.csv ---
+2026-03-20 22:12:41,362 | INFO | PASS: olist_sellers_dataset.csv is readable. Rows: 3095, Columns: 4
+2026-03-20 22:12:41,579 | INFO | PASS: No null values found in olist_sellers_dataset.csv.
+2026-03-20 22:12:41,579 | INFO | --------------------------------------------------
+2026-03-20 22:12:41,579 | INFO | --- AZURE BRONZE LAYER CHECK: olist_geolocation_dataset.csv ---
+2026-03-20 22:13:09,554 | INFO | PASS: olist_geolocation_dataset.csv is readable. Rows: 1000163, Columns: 5
+2026-03-20 22:13:25,797 | INFO | PASS: No null values found in olist_geolocation_dataset.csv.
+2026-03-20 22:13:25,797 | INFO | --------------------------------------------------
+2026-03-20 22:13:25,797 | INFO | --- AZURE BRONZE LAYER CHECK: product_category_name_translation.csv ---
+2026-03-20 22:13:26,296 | INFO | PASS: product_category_name_translation.csv is readable. Rows: 71, Columns: 2
+2026-03-20 22:13:26,461 | INFO | PASS: No null values found in product_category_name_translation.csv.
+2026-03-20 22:13:26,461 | INFO | --------------------------------------------------
+2026-03-20 22:13:26,461 | INFO | Test execution finished. Shutting down Spark...
+2026-03-20 22:13:29,012 | INFO | Spark shut down successfully.

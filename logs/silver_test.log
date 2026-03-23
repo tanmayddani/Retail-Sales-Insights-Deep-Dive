@@ -1,0 +1,51 @@
+2026-03-20 22:17:27,525 | INFO | Starting manual Silver validation test for all tables...
+2026-03-20 22:17:41,444 | INFO | --- AZURE SILVER LAYER CHECK: CUSTOMERS ---
+2026-03-20 22:17:45,517 | INFO | PASS: customers is readable. Rows: 99441, Columns: 5
+2026-03-20 22:17:47,284 | INFO | PASS (TRANSFORMATION): Primary key 'customer_id' is 100% unique.
+2026-03-20 22:17:48,512 | INFO | PASS: No null values found in customers.
+2026-03-20 22:17:48,512 | INFO | --------------------------------------------------
+2026-03-20 22:17:48,512 | INFO | --- AZURE SILVER LAYER CHECK: ORDERS ---
+2026-03-20 22:17:49,438 | INFO | PASS: orders is readable. Rows: 99441, Columns: 8
+2026-03-20 22:17:50,786 | INFO | PASS (TRANSFORMATION): Primary key 'order_id' is 100% unique.
+2026-03-20 22:17:53,007 | WARNING | NULLS: 'order_approved_at' contains 160 nulls (0.16%).
+2026-03-20 22:17:53,008 | WARNING | NULLS: 'order_delivered_carrier_date' contains 1783 nulls (1.79%).
+2026-03-20 22:17:53,010 | WARNING | NULLS: 'order_delivered_customer_date' contains 2965 nulls (2.98%).
+2026-03-20 22:17:53,010 | INFO | --------------------------------------------------
+2026-03-20 22:17:53,010 | INFO | --- AZURE SILVER LAYER CHECK: ORDER_ITEMS ---
+2026-03-20 22:17:53,649 | INFO | PASS: order_items is readable. Rows: 112650, Columns: 7
+2026-03-20 22:17:54,761 | INFO | PASS: No null values found in order_items.
+2026-03-20 22:17:54,763 | INFO | --------------------------------------------------
+2026-03-20 22:17:54,763 | INFO | --- AZURE SILVER LAYER CHECK: PAYMENTS ---
+2026-03-20 22:17:55,288 | INFO | PASS: payments is readable. Rows: 103886, Columns: 5
+2026-03-20 22:17:55,963 | INFO | PASS: No null values found in payments.
+2026-03-20 22:17:55,963 | INFO | --------------------------------------------------
+2026-03-20 22:17:55,963 | INFO | --- AZURE SILVER LAYER CHECK: PRODUCTS ---
+2026-03-20 22:17:56,411 | INFO | PASS: products is readable. Rows: 32951, Columns: 2
+2026-03-20 22:17:57,078 | INFO | PASS (TRANSFORMATION): Primary key 'product_id' is 100% unique.
+2026-03-20 22:17:57,728 | WARNING | NULLS: 'product_category_name' contains 610 nulls (1.85%).
+2026-03-20 22:17:57,728 | INFO | --------------------------------------------------
+2026-03-20 22:17:57,728 | INFO | --- AZURE SILVER LAYER CHECK: SELLERS ---
+2026-03-20 22:17:58,193 | INFO | PASS: sellers is readable. Rows: 3095, Columns: 4
+2026-03-20 22:17:58,713 | INFO | PASS (TRANSFORMATION): Primary key 'seller_id' is 100% unique.
+2026-03-20 22:17:59,112 | INFO | PASS: No null values found in sellers.
+2026-03-20 22:17:59,112 | INFO | --------------------------------------------------
+2026-03-20 22:17:59,112 | INFO | --- AZURE SILVER LAYER CHECK: CATEGORY_TRANSLATION ---
+2026-03-20 22:18:00,128 | INFO | PASS: category_translation is readable. Rows: 71, Columns: 2
+2026-03-20 22:18:00,544 | INFO | PASS (TRANSFORMATION): Primary key 'product_category_name' is 100% unique.
+2026-03-20 22:18:01,021 | INFO | PASS: No null values found in category_translation.
+2026-03-20 22:18:01,021 | INFO | --------------------------------------------------
+2026-03-20 22:18:01,021 | INFO | --- AZURE SILVER LAYER CHECK: REVIEWS ---
+2026-03-20 22:18:03,319 | INFO | PASS: reviews is readable. Rows: 102958, Columns: 7
+2026-03-20 22:18:04,710 | INFO | PASS (TRANSFORMATION): Primary key 'review_id' is 100% unique.
+2026-03-20 22:18:06,471 | WARNING | NULLS: 'review_id' contains 1 nulls (0.0%).
+2026-03-20 22:18:06,471 | WARNING | NULLS: 'order_id' contains 2176 nulls (2.11%).
+2026-03-20 22:18:06,471 | WARNING | NULLS: 'review_score' contains 4545 nulls (4.41%).
+2026-03-20 22:18:06,471 | WARNING | NULLS: 'review_creation_date' contains 8396 nulls (8.15%).
+2026-03-20 22:18:06,471 | WARNING | NULLS: 'review_answer_timestamp' contains 8367 nulls (8.13%).
+2026-03-20 22:18:06,471 | INFO | --------------------------------------------------
+2026-03-20 22:18:06,471 | INFO | --- AZURE SILVER LAYER CHECK: GEOLOCATION ---
+2026-03-20 22:18:08,371 | INFO | PASS: geolocation is readable. Rows: 738332, Columns: 5
+2026-03-20 22:18:10,044 | INFO | PASS: No null values found in geolocation.
+2026-03-20 22:18:10,044 | INFO | --------------------------------------------------
+2026-03-20 22:18:10,044 | INFO | Test execution finished. Shutting down Spark...
+2026-03-20 22:18:12,711 | INFO | Spark shut down successfully.

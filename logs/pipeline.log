@@ -1,0 +1,12 @@
+2026-03-20 20:32:08,971 - INFO - Successfully connected to Azure Storage.
+2026-03-20 20:32:08,971 - INFO - Starting file upload process...
+2026-03-20 20:32:10,072 - INFO - Success: 'olist_customers_dataset.csv' uploaded to 'srikanta/bronze/olist_customers_dataset.csv'
+2026-03-20 20:32:12,348 - INFO - Success: 'olist_orders_dataset.csv' uploaded to 'srikanta/bronze/olist_orders_dataset.csv'
+2026-03-20 20:32:14,629 - INFO - Success: 'olist_order_items_dataset.csv' uploaded to 'srikanta/bronze/olist_order_items_dataset.csv'
+2026-03-20 20:32:15,670 - INFO - Success: 'olist_order_payments_dataset.csv' uploaded to 'srikanta/bronze/olist_order_payments_dataset.csv'
+2026-03-20 20:32:18,253 - INFO - Success: 'olist_order_reviews_dataset.csv' uploaded to 'srikanta/bronze/olist_order_reviews_dataset.csv'
+2026-03-20 20:32:18,720 - INFO - Success: 'olist_products_dataset.csv' uploaded to 'srikanta/bronze/olist_products_dataset.csv'
+2026-03-20 20:32:18,787 - INFO - Success: 'olist_sellers_dataset.csv' uploaded to 'srikanta/bronze/olist_sellers_dataset.csv'
+2026-03-20 20:32:26,153 - INFO - Success: 'olist_geolocation_dataset.csv' uploaded to 'srikanta/bronze/olist_geolocation_dataset.csv'
+2026-03-20 20:32:26,186 - INFO - Success: 'product_category_name_translation.csv' uploaded to 'srikanta/bronze/product_category_name_translation.csv'
+2026-03-20 20:32:26,186 - INFO - Upload process completed.

@@ -179,3 +179,4 @@ Real-time predictions
 Recommendation system
 “I designed an end-to-end data pipeline using Azure Data Lake, Spark, and Snowflake to process and analyze e-commerce data. I implemented data cleaning, transformation into a star schema, SCD Type-2 for historical tracking, and automated ingestion using
 Snowpipe. Finally, I built an interactive Streamlit dashboard to visualize key business insights such as revenue trends, regional performance, and product analytics.”
+![Dashboard](https://github.com/user-attachments/assets/24fa1c03-d9cb-4e81-86ad-a0eb98aef9e6)
